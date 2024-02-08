@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$ANON</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="home" class="glitch">
+    <div class="title"></div>
+    <button id="start" class="glitch">Enter</button>
+    <p id="description"></p>
+  </div>
+
+  <div id="app" class="glitch">
+	  <div class="titleSound"><img class="logo" src="logo.png" alt= "logo"/><p>HYBRID TOKEN/NFT CONCEPT<br><p class="ca">0x1f0efa15e9cb7ea9596257da63fecc36ba469b30</p>
+	  <p class="ca">anonethereum@proton.me</p></div>
+	  <div class="initial">
+		  <a class="bttn" href="https://t.me/anonethereum">Telegram</a>
+		  
+		  <a class="bttn" href="https://twitter.com/anon_ethereum">twitter</a>
+		  
+		  <a class="bttn" href="https://etherscan.io/address/0x1f0efa15e9cb7ea9596257da63fecc36ba469b30">Contract</a>
+		  
+		  <a class="bttn" href="https://opensea.io/collection/anonethereum">opensea</a>
+		  
+		  <a  class="bttn" href="whitepaper%20grotesk.pdf" target="pdfIframe">White Paper</a>
+	  </div>
+    <div class="positionCanvas">
+      <canvas id="canvas"></canvas>
+      <audio id="audio" hidden crossOrigin="anonymous" src="https://res.cloudinary.com/dn32la6ny/video/upload/v1541584607/Daniel_Avery_-_Drone_Logic_PHLP02.mp3"></audio>
+    </div>
+    <div class="filter ">
+      <input type="range" id="range" name="filter" min="1" max="500" value="30" /><br />
+      <label for="filter">.</label>
+    </div>
+  </div>
+    <p><b></b></p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+  <script>
+    var isMobile = {
+      Android: function() {
+        return navigator.userAgent.match(/Android/i);
+      },
+
+      iOS: function() {
+        return navigator.userAgent.match(/iPhone/i);
+      },
+      any: function() {
+        return (isMobile.Android() || isMobile.iOS());
+      }
+    };
+
+    document.getElementById("start").addEventListener("click", function() {
+      // Show the centered div when the "start" button is clicked
+      document.getElementById("centeredDiv").style.display = "block";
+
+      if (isMobile.any()) {
+        document.getElementById("start").style.display = "none";
+        document.getElementById('description').innerHTML = "Touch the screen";
+      }
+    });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
